@@ -1,4 +1,4 @@
-package com.ryanheise.just_audio_platform_interface;
+package com.ryanheise.just_audio;
 
 import android.media.audiofx.Visualizer;
 import io.flutter.plugin.common.BinaryMessenger;
@@ -18,8 +18,8 @@ public class BetterVisualizer {
     private boolean hasPermission;
 
     public BetterVisualizer(final BinaryMessenger messenger, String id) {
-        waveformEventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio_platform_interface.waveform_events." + id);
-        fftEventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio_platform_interface.fft_events." + id);
+        waveformEventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio.waveform_events." + id);
+        fftEventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio.fft_events." + id);
     }
 
     public int getSamplingRate() {

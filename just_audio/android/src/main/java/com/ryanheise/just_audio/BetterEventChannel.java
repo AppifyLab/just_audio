@@ -1,4 +1,4 @@
-package com.ryanheise.just_audio_platform_interface;
+package com.ryanheise.just_audio;
 
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.EventChannel;

@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'method_channel_just_audio.dart';
+import 'package:just_audio_platform_interface/method_channel_just_audio.dart';
 
 /// The interface that implementations of just_audio must implement.
 ///

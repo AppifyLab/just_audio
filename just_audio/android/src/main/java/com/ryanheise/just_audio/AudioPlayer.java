@@ -1,4 +1,4 @@
-package com.ryanheise.just_audio_platform_interface;
+package com.ryanheise.just_audio;
 
 import android.Manifest;
 import android.app.Activity;
@@ -151,10 +151,10 @@ public class AudioPlayer implements MethodCallHandler, Player.Listener, Metadata
         this.context = applicationContext;
         this.rawAudioEffects = rawAudioEffects;
         this.offloadSchedulingEnabled = offloadSchedulingEnabled != null ? offloadSchedulingEnabled : false;
-        methodChannel = new MethodChannel(messenger, "com.ryanheise.just_audio_platform_interface.methods." + id);
+        methodChannel = new MethodChannel(messenger, "com.ryanheise.just_audio.methods." + id);
         methodChannel.setMethodCallHandler(this);
-        eventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio_platform_interface.events." + id);
-        dataEventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio_platform_interface.data." + id);
+        eventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio.events." + id);
+        dataEventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio.data." + id);
         visualizer = new BetterVisualizer(messenger, id);
         processingState = ProcessingState.none;
         extractorsFactory.setConstantBitrateSeekingEnabled(true);

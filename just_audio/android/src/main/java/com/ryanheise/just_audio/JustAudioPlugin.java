@@ -1,4 +1,4 @@
-package com.ryanheise.just_audio_platform_interface;
+package com.ryanheise.just_audio;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -25,7 +25,7 @@ public class JustAudioPlugin implements FlutterPlugin, ActivityAware {
         BinaryMessenger messenger = binding.getBinaryMessenger();
         methodCallHandler = new MainMethodCallHandler(applicationContext, messenger);
 
-        channel = new MethodChannel(messenger, "com.ryanheise.just_audio_platform_interface.methods");
+        channel = new MethodChannel(messenger, "com.ryanheise.just_audio.methods");
         channel.setMethodCallHandler(methodCallHandler);
         @SuppressWarnings("deprecation")
         FlutterEngine engine = binding.getFlutterEngine();
