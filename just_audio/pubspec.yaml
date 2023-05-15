@@ -37,15 +37,16 @@ dev_dependencies:
   mockito: ^5.0.0
   plugin_platform_interface: ^2.0.0
   flutter_lints: ^2.0.1
-# flutter:
-#   plugin:
-#     platforms:
-#       android:
-#         package: com.ryanheise.just_audio
-#         pluginClass: JustAudioPlugin
-#       ios:
-#         pluginClass: JustAudioPlugin
-#       macos:
-#         pluginClass: JustAudioPlugin
-#       web:
-#         default_package: just_audio_web
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.ryanheise.just_audio
+        pluginClass: JustAudioPlugin
+      ios:
+        pluginClass: JustAudioPlugin
+      macos:
+        pluginClass: JustAudioPlugin
+      web:
+        default_package: just_audio_web
